@@ -25,5 +25,37 @@ docker-compose up minio
 
 5. Open new tab on terminal to initialize trino with this command `docker exec -it trino trino`. Run the queries on `trino-sql.md`
 
+## Queries
+
+#### Simple query
+- Calculate the average signal strength for each country and network.
+
+#### Complex query
+- Count the unique units in each country.
+- Calculate the maximum, minimum, and average range for each network per country.
+- Combine these results in a single output.
 
 ## Results:
+
+### Spark:
+#### Unpartitoned table:
+- Simple query: 6.97 Sec
+- Complex query: 19.00 Sec
+
+#### Partitioned table:
+- Simple query: 6.13 seconds
+- Complex query: 15.26
+
+### Trino:
+#### Unpartitoned table:
+- Simple query: 1.52 Sec
+- Complex query: 4.83 Sec
+
+#### Partitioned table:
+- Simple query: 1.15 Sec
+- Complex query: 4.01 Sec
+
+
+## Analysis and Report
+
+
