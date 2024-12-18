@@ -56,6 +56,10 @@ docker-compose up minio
 - Complex query: 4.01 Sec
 
 
-## Analysis and Report
+## Analysis
+- Trino outperforms Spark in both simple and complex queries, particularly in partitioned tables with complex queries. This advantage may stem from its internal design, which is optimized for data querying through the concurrent execution of query stages.
+- The analysis of Spark was conducted in a Jupyter Notebook, so we might observe slightly improved performance if the analysis were executed in a dedicated Spark environment.
+- The size of the data is also likely to influence query times across both engines. Future work could include analysis with datasets in the terabyte range.
+- Additionally, exploring the performance of a distributed cluster presents an interesting area for further investigation.
 
 
