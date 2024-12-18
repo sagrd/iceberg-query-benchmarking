@@ -2,7 +2,9 @@
 
 ## 1. Folder Structure
 - `datasets` 
-- `notebooks` for storing notebooks
+- `notebooks` 
+- `docker-compose.yml`
+- `nessie.properties`
 
 
 ## 2. Instruction of use:
@@ -25,7 +27,8 @@ docker-compose up minio
 
 5. Open new tab on terminal to initialize trino with this command `docker exec -it trino trino`. Run the queries on `trino-sql.md`
 
-## Queries
+## 3. Queries
+The queries can be found in `trino-sql.md` inside `notebooks` folder
 
 #### Simple query
 - Calculate the average signal strength for each country and network.
@@ -35,7 +38,7 @@ docker-compose up minio
 - Calculate the maximum, minimum, and average range for each network per country.
 - Combine these results in a single output.
 
-## Results:
+## 4. Results:
 
 ### Spark:
 #### Unpartitoned table:
